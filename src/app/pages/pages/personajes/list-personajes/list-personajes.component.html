@@ -1,1 +1,37 @@
-<p>list-personajes works!</p>
+<div class="personajes">
+    <div class="personajes__header">
+        <div class="personajes__search">
+            <input type="text" placeholder="buscar...">
+        </div>
+        <div class="personajes__homepage">
+            <img routerLink="/" class="personajes__buttonHomepage" src="">
+        </div>
+    </div>
+    <div class="list-personajes">
+        <div class="row">
+            <div class="col-2">
+                <div class="list-personajes__item">
+                    <img class="list-personajes__img" src="{{}}">
+                    <p class="list-personajes__name">{{}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+          <p class="homepage__option">
+            <a routerLink="/">PERSONAJES</a>
+          </p>
+        </div>
+        <div class="col-4">
+          <p class="homepage__option" >
+            <a routerLink="/">CASAS</a>
+          </p>
+        </div>
+        <div class="col-4">
+          <p class="homepage__option" >
+            <a routerLink="/">CRONOLOGIA</a>
+          </p>
+        </div>
+    </div>
+</div>
