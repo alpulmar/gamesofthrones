@@ -3,3 +3,26 @@
 @import '~primeicons/primeicons.css';
 @import '~primeng/resources/themes/nova-light/theme.css';
 @import '~primeng/resources/primeng.min.css';
+
+@font-face {
+    font-family: got;
+    src: url(assets/fonts/GameOfThrones.ttf);
+  }
+  * {
+    font-family: got;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  body{
+    overflow-x: hidden;
+    background-color: #000000;
+  }
+  
+  a:-webkit-any-link {
+    color: white;
+    text-decoration: none;
+  }
+   
