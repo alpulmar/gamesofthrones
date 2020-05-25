@@ -11,7 +11,7 @@ import { CronologiaComponent } from './pages/pages/cronologia/cronologia.compone
 
 const routes: Routes = [
   {
-    path: 'homepage',
+    path: 'home',
     component: HomepageComponent,
   },
   {
