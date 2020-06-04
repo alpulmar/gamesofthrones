@@ -7,7 +7,7 @@
             <img routerLink="/" class="casas__buttonHomepage" src="../../../assets/img/home.png">
         </div>
     </div>
-    <div class="list-casas">
+    <div class="list-casas" *ngFor="let ListCasa of ListCasas">
         <div class="row">
             <div class="col-2">
                 <div class="list-casas__item">
@@ -18,20 +18,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4">
-          <p class="homepage__option">
-            <a>PERSONAJES</a>
-          </p>
-        </div>
-        <div class="col-4">
-          <p class="homepage__option" >
-            <a>CASAS</a>
-          </p>
-        </div>
-        <div class="col-4">
-          <p class="homepage__option" >
-            <a>CRONOLOGIA</a>
-          </p>
-        </div>
-    </div>
+      <div class="col-4">
+        <p class="homepage__option">
+          <a routerLink="/list-personajes">PERSONAJES</a>
+        </p>
+      </div>
+      <div class="col-4">
+        <p class="homepage__option" >
+          <a routerLink="/list-casas">CASAS</a>
+        </p>
+      </div>
+      <div class="col-4">
+        <p class="homepage__option" >
+          <a routerLink="/cronologia">CRONOLOGIA</a>
+        </p>
+      </div>
+  </div>
 </div>

@@ -4,10 +4,10 @@
             <input type="text" placeholder="buscar...">
         </div>
         <div class="personajes__homepage">
-            <img routerLink="/" class="personajes__buttonHomepage" src="../../../assets/img/home.png">
+            <img routerLink="/home" class="personajes__buttonHomepage" src="../../../assets/img/home.png">
         </div>
     </div>
-    <div class="list-personajes">
+    <div class="list-personajes" *ngFor="let ListPersonaje of ListPersonajes">
         <div class="row">
             <div class="col-2">
                 <div class="list-personajes__item">
@@ -20,17 +20,17 @@
     <div class="row">
         <div class="col-4">
           <p class="homepage__option">
-            <a>PERSONAJES</a>
+            <a routerLink="/list-personajes">PERSONAJES</a>
           </p>
         </div>
         <div class="col-4">
           <p class="homepage__option" >
-            <a>CASAS</a>
+            <a routerLink="/list-casas">CASAS</a>
           </p>
         </div>
         <div class="col-4">
           <p class="homepage__option" >
-            <a>CRONOLOGIA</a>
+            <a routerLink="/cronologia">CRONOLOGIA</a>
           </p>
         </div>
     </div>

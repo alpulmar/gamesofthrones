@@ -11,23 +11,23 @@ export class GotService {
   constructor(private httpClient: HttpClient) { }
 
   getListPersonajes() {
-    return this.httpClient.get(environment.url + 'pages/personajes/list-personajes');
+    return this.httpClient.get(environment.url + 'characters');
   }
 
   getDetailPersonaje(name) {
-    return this.httpClient.get(environment.url + 'pages/personajes/detail-personaje'+name);
+    return this.httpClient.get(environment.url + 'characters/'+name);
   }
 
   getCasas() {
-    return this.httpClient.get(environment.url + 'pages/casas/list-casas');
+    return this.httpClient.get(environment.url + 'houses');
   }
 
   getDetailCasa(name) {
-    return this.httpClient.get(environment.url + 'pages/casas/detail-casa'+name);
+    return this.httpClient.get(environment.url + 'houses'+name);
   }
 
-  getCronologia(name) {
-    return this.httpClient.get(environment.url + 'pages/cronologia'+name);
-  }
+  /*getCronologia(name) {
+    return this.httpClient.get(environment.url1 + 'pages/cronologia'+name);
+  }*/
 
 }

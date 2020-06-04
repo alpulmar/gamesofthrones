@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GamesOfThrones"
+    }
+  },
+  "defaultProject": "GamesOfThrones",
+  "cli": {
+    "analytics": "d182e4e8-58bd-4d24-8b9f-332675ba400b"
+  }
 }

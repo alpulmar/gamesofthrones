@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GotService } from '../../../../shared/services/got.service';
 
 @Component({
   selector: 'app-list-personajes',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPersonajesComponent implements OnInit {
 
-  constructor() { }
+  ListPersonajes: Array<any>;
+  constructor(private gotService: GotService) {}
 
   ngOnInit(): void {
+    this.gotService.getListPersonajes().subscribe((res: any) => {
+      console.log(res);
+      this.ListPersonajes = res.splice(0, 15);
+    });
   }
-
 }
