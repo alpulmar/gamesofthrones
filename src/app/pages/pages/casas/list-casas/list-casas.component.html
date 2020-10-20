@@ -1,18 +1,24 @@
 <div class="casas">
     <div class="casas__header">
         <div class="casas__search">
-            <input type="text" placeholder="buscar...">
+          <img class="casas__icon" src="../../../assets/img/search.png" alt="">
+          <input class="casas__searchText" (keyup)="searchCasas()" [(ngModel)]="searchCasa" type="text" pInputText placeholder="buscar...">
         </div>
         <div class="casas__homepage">
-            <img routerLink="/" class="casas__buttonHomepage" src="../../../assets/img/home.png">
+            <img routerLink="/home" class="casas__buttonHomepage" src="../../../assets/img/home.png">
         </div>
     </div>
-    <div class="list-casas" *ngFor="let ListCasa of ListCasas">
+    <div class="list-casas">
         <div class="row">
-            <div class="col-2">
+            <div class="col-2" *ngFor="let house of Casas">
                 <div class="list-casas__item">
-                    <img class="list-casas__img" src="">
-                    <p class="list-casas__name"></p>
+                  <img
+                    routerLink="/Casas/{{ house.name }}"
+                    class="list-casas__img"
+                    src="{{ house.image }}"
+                    alt="{{ house.name }}"
+                />
+                <p class="list-casas__img__name">{{ house.name }}</p>
                 </div>
             </div>
         </div>

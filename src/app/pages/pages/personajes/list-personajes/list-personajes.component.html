@@ -1,18 +1,24 @@
 <div class="personajes">
     <div class="personajes__header">
         <div class="personajes__search">
-            <input type="text" placeholder="buscar...">
+            <img class="personajes__icon" src="../../../assets/img/search.png" alt="">
+            <input class="personajes__searchText" (keyup)="searchListPersonajes()" [(ngModel)]="searchPersonaje" type="text" pInputText placeholder="buscar...">
         </div>
-        <div class="personajes__homepage">
+        <div class="personajes__goback">
             <img routerLink="/home" class="personajes__buttonHomepage" src="../../../assets/img/home.png">
         </div>
     </div>
-    <div class="list-personajes" *ngFor="let ListPersonaje of ListPersonajes">
+    <div class="list-personajes">
         <div class="row">
-            <div class="col-2">
+            <div class="col-2" *ngFor="let character of ListPersonajes">
                 <div class="list-personajes__item">
-                    <img class="list-personajes__img" src="">
-                    <p class="list-personajes__name"></p>
+                  <img
+                    routerLink="/ListPersonajes/{{ character.name }}"
+                    class="list-personajes__img"
+                    src="{{ character.image }}"
+                    alt="{{ character.name }}"
+                  />
+                  <p class="list-personajes__img__name">{{ character.name }}</p>
                 </div>
             </div>
         </div>

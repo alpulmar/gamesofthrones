@@ -1,2 +1,22 @@
+.homepage {
+    background-image: url("https://cdn.zeplin.io/5e1c73baff24c3be01ba9cca/assets/210f33c2-76eb-474c-a297-6774dc1dd03c.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
 
+    &__title {
+      font-size: 150px;
+      color: white;
+      width: 60%;
+      margin: auto;
+      padding: 15% 0 9%;
+    }
+   
+    &__option {
+      font-size: 25px;
+    }
+  }
   
